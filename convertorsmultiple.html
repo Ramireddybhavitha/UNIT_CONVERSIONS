@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERTORS</title>
+    <link rel="stylesheet" href="./covmultiple.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button id="first"><i class="fa-solid fa-calculator"></i> Click!</button>
+    <section>
+        <i id=icon class="fa-solid fa-circle-xmark" style="color: #ce031e;"></i>
+        <h1 style="background-color: black; color: aliceblue; text-align: center;">UNIT CONVERSIONS</h1> <br><br>
+        <div id="div1">
+<input type="text" id="input"><i class="fa-solid fa-arrow-right" style="color: #51291f;"></i>&nbsp;
+
+
+<input type="text" id="output"> <br>
+
+
+<select name="" id="one">
+    <option value="meters">meters</option>
+    <option value="cm">centimeters</option>
+    <option value="millimeters">milli meters</option>
+    <option value="acre">acre</option>
+    <option value="cents">cents</option>
+    <option value="feet">feet</option>
+    <option value="inches">inches</option>
+    <option value="squarefeet">squarefeet</option>
+<option value="dollars">Dollars</option>
+<option value="rupees">Rupees</option>
+
+
+
+
+</select>
+<select name="" id="two">
+    
+    <option value="cm">cm</option>
+    <option value="meters">meters</option>
+    <option value="millimeters">milli meters</option>
+    <option value="acre">acre</option>
+    <option value="cents">cents</option>
+    <option value="feet">feet</option>
+    <option value="inches">inches</option>
+    <option value="squarefeet">squarefeet</option>
+    <option value="dollars">Dollars</option>
+    <option value="rupees">Rupees</option>
+
+
+
+
+</select>
+<br>
+<button id="reset">Reset</button>
+
+
+
+        </div>
+        
+    </section>
+    <script>
+var section=document.querySelector('section')
+var one=document.getElementById('one')
+var two=document.getElementById('two')
+var input=document.getElementById('input')
+let output=document.getElementById('output')
+var reset=document.getElementById('reset')
+var btn=document.querySelector('button')
+var icon=document.getElementById('icon')
+
+btn.onclick=function display(){
+    section.style.visibility='visible'
+    btn.style.visibility='hidden'
+}
+icon.onclick=function dis(){
+section.style.visibility='hidden'
+btn.style.visibility='visible'
+}
+var m
+
+input.addEventListener('input',function(){
+    let a=input.value
+
+    if(one.value==='meters' && two.value==='cm'){
+   
+    let b=a*100
+    output.value=b}
+    else if(one.value==='cm' && two.value==='meters'){
+        let b=a/100
+        output.value=b
+
+    }
+    else if(one.value==='feet' && two.value==='cm'){
+        let b=a*30.48
+        output.value=b
+
+    }
+    else if(one.value==='cm' && two.value==='feet'){
+        let b=a/30.48
+        output.value=b
+
+    }
+    else if(one.value==='cm' && two.value==='millimeters'){
+        let b=a*10
+        output.value=b
+
+    }
+    else if(one.value==='cm' && two.value==='millimeters'){
+        let b=a/10
+        output.value=b
+
+    }
+    else if(one.value==='cm' && two.value==='inch'){
+        let b=a/2.54
+        output.value=b
+
+    }
+    else if(one.value==='inch' && two.value==='cm'){
+        let b=a*2.54
+        output.value=b
+
+    }
+    else if(one.value==='feet' && two.value==='inches'){
+        let b=a*12
+        output.value=b
+
+    }
+    else if(one.value==='inches' && two.value==='feet'){
+        let b=a/12
+        output.value=b
+
+    }
+    else if(one.value==='cents' && two.value==='acre'){
+        let b=a*0.01
+        output.value=b
+
+    }
+    else if(one.value==='acre' && two.value==='cents'){
+        let b=a*100
+        output.value=b
+
+    }
+    else if(one.value==='acre' && two.value==='squarefeet'){
+        let b=a*0.0023
+        output.value=b
+
+    }
+    else if(one.value==='squarefeet' && two.value==='acre'){
+        let b=a*435.6
+        output.value=b
+
+    }
+    else if(one.value==='squarefeet' && two.value==='cents'){
+        let b=a*0.0023
+        output.value=b
+
+    }
+    else if(one.value==='cents' && two.value==='squarefeet'){
+        let b=a*435.56
+        output.value=b
+
+    }
+    else if(one.value==='meters' && two.value==='millimeters'){
+        let b=a*1000
+        output.value=b
+
+    }
+    else if(one.value==='millimeters' && two.value==='meters'){
+        let b=a/1000
+        output.value=b
+
+    }
+    else if(one.value==='meters' && two.value==='feet'){
+        let b=a*3.281
+        output.value=b
+
+    }
+    else if(one.value==='foot' && two.value==='meters'){
+        let b=a/3.281
+        output.value=b
+
+    }
+    else if(one.value==='dollars' && two.value==='rupees'){
+        let b=a*83.28
+        output.value=b
+
+    }
+    else if(one.value==='rupees' && two.value==='dollars'){
+        let b=a*0.012
+        output.value=b
+
+    }
+    
+
+
+    
+    
+
+
+})
+reset.onclick=function dis(){
+input.value=' '
+output.value=' '
+}
+// function backward(){
+//     history.back()
+// }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
